@@ -23,7 +23,7 @@ function startGame() {
     if (k.style.display == "block") {
         k.style.display = "none";
     }
-
+    //Seleciona as perguntas e as respostas
     if (count < perguntas.length) {
         document.getElementById("pergunta").innerHTML = perguntas[count];
         document.getElementById("resposta1").innerHTML = respostas[count][0];
@@ -98,6 +98,7 @@ var respostas = [
                 ['ATLÂNTICO', 'PACÍFICO', 'ÍNDICO', 'ÁRTICO', 2],
                 ['6 E 27 DE OUTUBRO', '8 E 27 DE OUTUBRO', '9 E 26 DE OUTUBRO', '7 E 23 DE OUTUBRO', 1],
                 ];
+                
 //valores (pontuação)
 var valores = [1, 2, 3, 4, 5, 10, 20, 30, 40, 50, 100, 200, 300, 400, 500, '1 MILHÃO'];
 //contador das perguntas

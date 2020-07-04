@@ -64,6 +64,7 @@ body {
 /* Base do jogo */
 
 /* Perguntas */
+
 .pergunta {
     text-align: -webkit-center;
 }
@@ -80,6 +81,7 @@ body {
 }
 
 /* Respostas */
+
 .respostas {
     text-align: -webkit-right;
     margin-right: 1%;
