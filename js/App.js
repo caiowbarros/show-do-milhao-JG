@@ -104,12 +104,14 @@ var valores = [1, 2, 3, 4, 5, 10, 20, 30, 40, 50, 100, 200, 300, 400, 500, '1 MI
 let count = 0;
 //Dinheiro ganho (pontuação)
 let din = 0;
+//Audio quando acerta
+var audioAcertar = new Audio('./audio/certa-resposta.mp3');
 //Audio quando para
-var audioParar = new Audio('./audio/vai-parar.mp3');
+var audioParar = new Audio('./audio/ok-parou.mp3');
 //Audio quando erra
-var audioErrar = new Audio('./audio/nao-consegue.mp3');
+var audioErrar = new Audio('./audio/que-pena-errou.mp3');
 //Audio quando ganha 1 milhão
-var audioGanhar = new Audio('./audio/ganhou-1-milhao.mp3');
+var audioGanhar = new Audio('./audio/1-milhao.mp3');
 
 //Verifica se a resposta está certa
 function playGame(resposta) {
@@ -117,6 +119,7 @@ function playGame(resposta) {
         if (count == 15) {
             gameWon();
         } else {
+            audioAcertar.play();
             count++;
             din = valores[count - 1];
             startGame();
