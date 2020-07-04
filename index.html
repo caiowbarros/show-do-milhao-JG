@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show do Milhão</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script type="text/javascript" src="js/App.js"></script>
+</head>
+<body>
+    <!-- Esquerda -->
+    <div class="left-container">
+        <!-- Logo -->
+        <img src="img/showdomilhao-logo.png" alt="">
+        <!-- Menu -->
+        <div class="menu" id="menu">
+            <a href="javascript:startGame()">JOGAR</a>
+            <a href="javascript:showRules()">REGRAS</a>
+        </div>
+        <!-- Game Over -->
+        <div class="perdeu" id="perdeu" style="display: none;">
+            <div class="parabens">
+                <p>GAME OVER</p>
+                <p style="margin-bottom: 20%;" id="pontuacao"></p>
+                <a href="javascript:refreshGame()">VOLTAR AO MENU</a>
+            </div>
+        </div>
+        <!-- Terminou o jogo -->
+        <div class="ganhou" id="ganhou" style="display: none;">
+            <div class="parabens">
+                <p>PARABÉNS</p>
+                <p style="margin-bottom: 20%;">SUA PONTUAÇÃO: R$1 MILHÃO</p>
+                <a href="javascript:refreshGame()">VOLTAR AO MENU</a>
+            </div>
+        </div>
+        <!-- Jogo (base) -->
+        <div class="jogo" id="jogo" style="display: none;">
+            <!-- Pergunta -->
+            <div class="pergunta">
+                <p id="pergunta"></p>
+            </div>
+            <!-- Respostas -->
+            <div class="respostas">
+                <!-- Resposta número 1 -->
+                <div onclick="playGame(1)" class="resposta">
+                    <div class="numero">1</div>
+                    <p id="resposta1"></p>
+                </div>
+                <!-- Resposta número 2 -->
+                <div onclick="playGame(2)" class="resposta">
+                    <div class="numero">2</div>
+                    <p id="resposta2"></p>
+                </div>
+                <!-- Resposta número 3 -->
+                <div onclick="playGame(3)" class="resposta">
+                    <div class="numero">3</div>
+                    <p id="resposta3"></p>
+                </div>
+                <!-- Resposta número 4 -->
+                <div onclick="playGame(4)" class="resposta">
+                    <div class="numero">4</div>
+                    <p id="resposta4"></p>
+                </div>
+            <!-- "Prêmios" (opções) -->
+                <div class="premios">
+                    <div class="opcao">
+                        <div class="valor" id="errar"></div>
+                        <p>ERRAR</p>
+                    </div>
+                    <div class="opcao">
+                        <div class="valor" id="parar"></div>
+                        <p class="parar" onclick="stopGame()">PARAR</p>
+                    </div>
+                    <div class="opcao">
+                        <div class="valor" id="acertar"></div>
+                        <p>ACERTAR</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Direita -->
+    <div class="right-container">
+        <div id="regras" style="display: none;">
+            <h2>Regras</h2>
+            <p>O jogo consiste em três rodadas e uma pergunta final: a primeira são 5 perguntas, valendo mil reais cada. A segunda, 5 perguntas valendo R$10 mil cada. A terceira, também 5 perguntas, valendo R$100 mil cada. A última pergunta vale R$1 milhão.</p>
+            <p>Durante o jogo, o jogador vai ter duas opções, parar ou responder (podendo acertar ou errar a pergunta):</p>
+            <p>Caso pare, o jogador receberá valor que já possuía e o jogo terminará.</p>
+            <p>Caso responda e erre, o jogador receberá metade do valor que receberia caso parasse e o jogo terminará, com exceção da última pergunta, na qual o jogador não receberá nada.</p>
+            <p>Caso responda e acerte, o jogador receberá o valor inteiro e continuará no jogo, até a pergunta final.</p>
+        </div>
+    </div>
+</body>
+</html>
