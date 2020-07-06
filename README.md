@@ -16,4 +16,4 @@ Projeto para segunda etapa do processo seletivo 2020.2 da Jovem Gênios
 
 ## Tutorial
 
-[link]
+https://youtu.be/fBVdiPiov-0
