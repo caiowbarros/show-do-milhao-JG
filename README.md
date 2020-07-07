@@ -1,6 +1,6 @@
 # Show do Milhão
 
-Projeto para segunda etapa do processo seletivo 2020.2 da Jovem Gênios
+Projeto para segunda etapa do processo seletivo 2020.2 da Jovens Gênios
 
 ## Contexto
 
